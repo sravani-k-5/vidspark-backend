@@ -40,7 +40,7 @@ const s3ClientConfig = new S3Client({
       secretAccessKey: process.env.awsSecretKey,
     },
   });
-  const BUCKET_NAME = "vidspark-s3";
+  const BUCKET_NAME = process.env.awsBucketName;
 const upload = multer({ storage: multer.memoryStorage() });
 
 
